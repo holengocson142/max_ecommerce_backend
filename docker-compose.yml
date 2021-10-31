@@ -1,0 +1,39 @@
+version: '2'
+services:
+    Redis:
+        image: redis
+        stdin_open: true
+        tty: true
+        ports:
+            - 6379:6379/tcp
+        command:
+            - redis-server
+            - --requirepass
+            - Gbw1DBTPgm
+        labels:
+            io.rancher.container.pull_image: always
+            io.rancher.scheduler.affinity:host_label: name=alo
+    postgres:
+        image: postgres
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: VCHCPP4mvKXwLZbg
+            PGDATA: /data/postgres
+        stdin_open: true
+        volumes:
+            - /var/local/data/postgres:/data/postgres
+        tty: true
+        ports:
+            - 5432:5432/tcp
+        labels:
+            io.rancher.container.pull_image: always
+            version: '2'
+
+    rabbitmq:
+        image: rabbitmq:management
+        ports:
+            - '5672:5672'
+            - '15672:15672'
+        environment:
+            - RABBITMQ_USERNAME=username
+            - RABBITMQ_PASSWORD=password

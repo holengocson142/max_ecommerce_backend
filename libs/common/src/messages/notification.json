@@ -1,0 +1,12 @@
+{
+    "WELCOME": {
+        "TITLE": "Chào mừng bạn đến với LiveTrade!",
+        "DESCRIPTION": "Chào mừng bạn đến với LiveTrade."
+    },
+    "ACCOUNT": {
+        "APPROVED": {
+            "TITLE": "Tài khoản của bạn đã được phê duyệt!",
+            "DESCRIPTION": "Bây giờ bạn đã có thể đầu tư vào bất cứ cổ phiếu nào trên LiveTrade."
+        }
+    }
+}
